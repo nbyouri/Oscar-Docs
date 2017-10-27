@@ -25,7 +25,7 @@ Software Development Project\\     % Titre
 {\Large \em Specifications \& Requirements - Team 06}}
 \newcommand{\teacher}{Kim \textsc{Mens}} % Professeur
 \newcommand{\teachingassistant}{Benoît \textsc{Duhoux}}
-\newcommand{\authors}{Youri Mouton, Rémy Voet (6642-16-00 remy.voet@student.uclouvain.be), Nicola Romano, Sophie Madessis, Samuel Monroe, Antoine Rime, Illias Tchichi, Moers Tristan (2734-16-00
+\newcommand{\authors}{Youri Mouton (0746-16-00 youri.mouton@student.uclouvain.be),\\ Rémy Voet (6642-16-00 remy.voet@student.uclouvain.be),\\ Nicola Romano(0182-17-00 nicola.romano@student.uclouvain.be),\\ Sophie Madessis (2593-12-00  sophie.madessis@student.uclouvain.be),\\ Samuel Monroe (0467-10-00 samuel.monroe@student.uclouvain.be),\\ Antoine Rime (3624-13-00 antoine.rime@student.uclouvain.be),\\ Ilias Boutchichi (7693-12-00 ilias.boutchichi@student.uclouvain.be),\\ Moers Tristan (2734-16-00
 tristan.moers@student.uclouvain.be)} % Auteurs
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \setlength{\parskip}{1ex} % Espace entre les paragraphes
@@ -33,10 +33,10 @@ tristan.moers@student.uclouvain.be)} % Auteurs
 \begin{document}
 \newcolumntype{C}{>$c<$}
   \include{title}
-  \cleardoublepage % Dans le cas du recto verso, ajoute une page blanche si besoin
+  %\cleardoublepage % Dans le cas du recto verso, ajoute une page blanche si besoin
   %\tableofcontents % Table des matières
   \sloppy          % Justification moins stricte : des mots ne dépasseront pas des paragraphes
-  \cleardoublepage
+  %\cleardoublepage
 
 \section{Module's description}
 For the moment the questions are created manually by the professor. To increase the number of questions available for a given skill, we want to give the possibility for a professor to create/solve a large sample of questions based on typical problems.\\
@@ -69,12 +69,12 @@ The number before each use story is the value coming from the planning poker ses
     I want to be able to set the domain of a problem\\
     In order to let the question creation functionnalities use this domain for random parameters\\
 
-    \item 8 :\\ % DONE
+    \item 13 :\\ % DONE
     As a teacher\\
     I want to have, for each assignement topic, a functionnality to create a related problem based on random values\\
     In order to not having to type specific values each time.\\
 
-    \item 5 :\\ % DONE
+    \item 8 :\\ % DONE
     As a teacher\\
     I want a functionnality to create multiple 2nd degree equations from random values to be solved by students\\
     In order to not having to manually type the parameters\\
@@ -146,8 +146,8 @@ The number before each use story is the value coming from the planning poker ses
 
     \item 13 : \\ % DONE
     As a teacher\\
-    I want to have a functionality to select a kind of object (cylinder, cone, prism, pyramid) and create that object from random values to be included in the assignement\\
-    In order to not having to specify values for that object, nor including pictures of that object in the test for the student\\
+    I want to have a functionality to select a kind of object (cylinder, cone, prism, pyramid) and create that object from random values to be included in the assignement
+
 
 \end{enumerate}
 
@@ -230,30 +230,103 @@ The professor can choose subject and assessment type or skills. The right side i
     \includegraphics[scale=0.5]{Question_configuration.png}\\
 \end{center}
 \subsection{Generated Questions Choice}
-The professor can choose questions in the list of generated quesions. There is the possibility to generate 5 new question if some are not suitable.\\
+The professor can choose questions in the list of generated quesions. There is the possibility to generate 5 new question if some are not suitable.
 
 \begin{center}
-    \includegraphics[scale=0.5]{Questions_generated_choice.png}\\
+    \includegraphics[scale=0.5]{Questions_generated_choice.png}
 \end{center}
 \subsection{Student Answer}
 The student has the problem with an illustration and can answer in the input.\\
 
 \begin{center}
-    \includegraphics[scale=0.5]{Student_Answer.png}\\
+    \includegraphics[scale=0.5]{Student_Answer.png}
 \end{center}
-\newpage
+
 \section{Activity diagram}
-Red bubbles in the Activity Diagram highlight the main activities we will be working on. Blue arrows represent interaction between student and professor diagrams.\\
+Red bubbles in the Activity Diagram highlight the main activities we will be working on. Blue arrows represent interaction between student and professor diagrams.
+\subsection{Student-System}
 \begin{center}
-    \includegraphics[scale=0.40]{studentAD.png}
+    \includegraphics[height=.8\textheight]{studentAD.png}
 \end{center}
+\subsection{Professor-System}
+
 \begin{center}
-    \includegraphics[scale=0.40]{profAD.png}
+    \includegraphics[height=.8\textheight]{profAD.png}
 \end{center}
+
+
 \section{Planning}
+\subsection{Tasks planning}
 \begin{center}
-    \includegraphics[scale=0.68,angle=90]{multipleproblems.jpg}
+    \includegraphics[scale=0.65,angle=90]{multipleproblems.jpg}
 \end{center}
+\subsection{Delivrables planning}
+\begin{itemize}
+\item
+FRI 29.09
+Module to be developed chosen
+A detailed ORM or ER model of the structure of the initial database.
+
+\item
+FRI 06.10 16:00
+First draft of requirements document ready: usage scenarios, user stories and time estimate of user stories.
+Final requirements document (10 pages) : usage scenarios, uses cases, mock-up, planning, activity diagram.
+
+\item
+FRI 20.10
+First draft of design diagrams ready: class and sequence diagrams.
+
+\item
+FRI 27.10
+Updated requirements document to be delivered by all teams for which the client requested modifications.
+Completed version of design document with improved version of class and sequence diagrams + a detailed description of how the module to be developed will integrate with the existing application.
+First rough implementation of initial prototype, with corresponding tests.
+
+\item
+FRI 03.11
+1st prototype ready and working.
+Test suites + document explaining the tests.
+Document detailing what existing code or parts of the database the 1st prototype has used or touched.
+
+\item
+FRI 10.11
+1st prototype integrated and merged with main application and prototypes of other teams.
+
+\item
+FRI 17.11
+Design document with class and sequence diagrams for 2nd prototype + detailed description of how the module to be developed will integrate with the existing application.
+First rough implementation of second prototype with corresponding tests.
+
+
+\item
+FRI 24.11
+2nd prototype ready and working.
+Test suites + document explaining the tests.
+Document detailing precisely what existing code or parts of the database the 2nd prototype touched.
+
+\item
+FRI 08.12
+2nd prototype integrated and merged with the main application and prototypes of other teams
+Final technical report
+Report on the team organisation
+
+\item
+FRI 15.12
+Fully documented code.
+Final overall version of the tests (unit tests and Selenium), updated according to the two feedbacks.
+Final user manual in OpenOffice format, to be handed over to the client (production quality).
+
+\item
+MON 18.12
+Short video (YouTube link) with a demo of the working prototype.
+
+\item
+WED 20.12
+Final project defence including a demonstration “in vivo” on the “production” site.
+
+
+
+\end{itemize}
 \section{Development methodology}
 
     We will be using SCRUM as the Agile methodology.\\
@@ -291,4 +364,9 @@ Red bubbles in the Activity Diagram highlight the main activities we will be wor
         \item \textbf{Antoine Rime} : Developer
         \item \textbf{Samuel Monroe} : Behaviour Driven Development, Testing, Front-End Developer
     \end{itemize}
+
+\section{Conclusion}
+The course of this first part went well, the scrum methodology is apprehended by everyone. But we encountered difficulties in planning poker our estimates were not close so it took us a long time to discuss. The meeting with the client allowed us to better understand their expectations of the project because it was not well understood. \\
+
+Now with all these points and the client feedback we are ready to start the implementation. We have an idea of what the interface will look like thanks to Wireframes and availables features for user.
 \end{document}
